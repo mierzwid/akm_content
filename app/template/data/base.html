@@ -13,11 +13,11 @@
   <meta name="robots" content="index, follow, noarchive" />
   <meta name="googlebot" content="noarchive" />
 
-  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/layout.css" media="screen, projection, tv " />
-  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/html.css" media="screen, projection, tv " />
-  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/html-ext-1.css" media="screen, projection, tv " />
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/layout.css" media="screen, projection, tv " />
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/html.css" media="screen, projection, tv " />
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/html-ext-1.css" media="screen, projection, tv " />
 
-  <script type="text/javascript" src="{{ MEDIA_URL }}js/TreeMenu.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/TreeMenu.js"></script>
 
 </head>
 <body>
@@ -47,7 +47,7 @@ window.onload = function() {
 
   <!-- #headerImg: holds the main header image or flash -->
   <div id="headerImg" class="width">
-    <img src="{{ MEDIA_URL }}images/banners/{{image}}.jpg" alt="Akademickie Koło Misjologiczne" />
+    <img src="{{ STATIC_URL }}images/banners/{{image}}.jpg" alt="Akademickie Koło Misjologiczne" />
   </div>
 
   <!-- #menu: the main large box site menu -->
