@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+
+<head>
+  <title>{% block title %}Akademickie Koło Misjologiczne - Relacje z pierwszej ręki{% endblock %}</title>
+
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta name="author" content="Dariusz Wilczak, studio7designs.com" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="Akademickie Koo Misjologiczne, AKM, misjologia, misje, koo akademickie"/>
+  <meta name="robots" content="index, follow, noarchive" />
+  <meta name="googlebot" content="noarchive" />
+
+  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/layout.css" media="screen, projection, tv " />
+  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/html.css" media="screen, projection, tv " />
+  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/html-ext-1.css" media="screen, projection, tv " />
+
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/TreeMenu.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+window.onload = function() {
+    new TreeMenu("mainMenuRigth");
+}
+</script>
+
+<!-- #content: holds all except site footer - causes footer to stick to bottom -->
+<div id="content">
+
+  <!-- #header: holds the logo and top links -->   
+  <div id="header" class="width">
+  
+    <h1>Akademickie Koło Misjologiczne</h1>
+  
+    <ul>
+      <li><a href="/">Strona główna</a></li>
+      <li><a href="/admin" class="last">Log in</a></li>
+    </ul>
+
+  </div>
+  <!-- #header end -->
+
+
+  <!-- #headerImg: holds the main header image or flash -->
+  <div id="headerImg" class="width">
+    <img src="{{ MEDIA_URL }}images/banners/{{image}}.jpg" alt="Akademickie Koło Misjologiczne" />
+  </div>
+
+  <!-- #menu: the main large box site menu -->
+	{% block menu_top %}
+	{% endblock %}
+  <!-- #menu end -->
+
+  <!-- #page: holds the page content -->
+  <div id="page">
+
+  <!-- #columns: holds the columns of the page -->
+    <div id="columns" class="widthPad">
+	{% block page_content %}
+	{% endblock %}
+	
+    <!-- Right link column -->
+	{% block menu_right %}
+	{% endblock %}
+    <!-- Right links column end -->
+
+    </div>
+    <!-- #columns end -->
+
+  </div>
+  <!-- #page end -->
+
+</div>
+<!-- #content end -->
+
+<!-- #footer: holds the site footer (logo and links) -->
+<div id="footer">
+
+  <!-- #bg: applies the site width and footer background -->
+  <div id="bg" class="width">
+  
+    <ul>
+      <li><a href="http://www.misja.info">AKM &copy; 2012</a></li>
+      <li><a href="#" class="last">Autorzy</a></li>
+	</ul>
+
+  </div>
+  <!-- #bg end -->
+
+</div>
+<!-- #footer end -->
+
+</body>
+
+</html>

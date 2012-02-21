@@ -1,0 +1,23 @@
+a.currentDay {
+font-size:18.0pt;
+}
+
+img.l_img{
+float: left; 
+clear: both; 
+position: relative; 
+margin-right: 20px;
+margin-top: 20px;
+}
+
+img.r_img{
+float: right; 
+clear: both; 
+position: relative; 
+margin-left: 20px;
+margin-top: 20px;
+}
+
+a.delay{
+color: red;
+}

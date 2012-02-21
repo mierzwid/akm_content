@@ -1,0 +1,10 @@
+{% extends "data/menu.html" %}
+
+{% block page_content %}
+<!-- Left column -->
+    <div class="floatLeft width73 justifyColumn">
+		<h1>{{strona.tytul}}</h1>
+		<p>{{strona.tekst|safe}}</p>
+		<blockquote>{{strona.pub_date|date:"d.m.Y (H:i)" }}</blockquote>
+	</div>
+{% endblock %}

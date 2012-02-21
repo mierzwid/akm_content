@@ -1,0 +1,41 @@
+{% extends "data/menu.html" %}
+
+{% block page_content %}
+    <!-- Left thumbnail column -->
+    <div class="floatLeft width25">
+    
+      <img src="{{ MEDIA_URL }}images/logo_bigger.png" alt="AKM LOGO" class="logo"/>
+      
+      <span style="margin-left: 25px;"><img src="{{ MEDIA_URL }}images/plakat.jpg" alt="Mission: Possible!" class="logo"/></span>
+
+      <h2 style="text-align: center;">Kilka zdjęć z galerii:</h2>
+
+      <ul class="thumbs">
+        <li><a href="http://picasaweb.google.com/www.misja.info" class="thumb"><img src="{{ MEDIA_URL }}images/thumbs/photo1.jpg" alt=""/></a></li>
+        <li><a href="http://picasaweb.google.com/www.misja.info" class="thumb"><img src="{{ MEDIA_URL }}images/thumbs/photo2.jpg" alt=""/></a></li>
+        <li><a href="http://picasaweb.google.com/www.misja.info" class="thumb"><img src="{{ MEDIA_URL }}images/thumbs/photo3.jpg" alt=""/></a></li>
+        <li><a href="http://picasaweb.google.com/www.misja.info" class="thumb"><img src="{{ MEDIA_URL }}images/thumbs/photo4.jpg" alt=""/></a></li>
+      </ul>
+    </div>
+	<!-- Left thumbnails end -->
+
+    <!-- Center news column -->
+	<div class="floatLeft width50">
+	{% if wpis_list %}
+		{% for wpis in wpis_list %}
+		<h1>{{ wpis.tytul }}</h1>
+		  <div class="post justifyColumn">
+			  <div class="date">
+				<span class="month">{{ wpis.data_wydarzenia|date:"m.Y" }}</span>
+				<span class="day style6">{{ wpis.data_wydarzenia|date:"d" }}</span>
+			  </div>
+			  <p>{{ wpis.tekst|safe }}</p>
+		  </div>
+		{% endfor %}
+	{% else %}
+		<p>Brak aktualnych wpisów.</p>
+	{% endif %}
+	</div>
+	<!-- Center news column end -->
+
+{% endblock %}

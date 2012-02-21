@@ -1,0 +1,38 @@
+{% extends "data/base.html" %}
+
+{% block menu_top %}
+<div id="menu" class="width">
+<ul>
+	{% for menu in menu_top %}
+	<li>
+		<a href="{{menu.strona.get_absolute_url}}" class="forum" onfocus="blur()">
+		  <span class="title ">{{menu.nazwa}}</span>
+		  <span class="desc style3">{{menu.opis}}</span>
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+</div>
+{% endblock %}
+<!-- #menu end -->
+
+{% block menu_right %}
+  <div class="floatRight width25 lightBlueBg horzPad">
+  <h2>Menu</h2>
+  <ul id="mainMenuRigth" class="submenu1">
+	{% for menu in menu_prawe %}
+		<li>
+			{% if menu.strona %}
+				<a href="{{menu.strona.get_absolute_url}}">{{menu.nazwa}}</a>
+			{% else %}
+				<a href="javascript:void(0)">{{menu.nazwa}}</a>
+				<ul class="submenu2">
+				{% for pod_menu in menu.pod_menu.all %}
+					<li><a href="{{pod_menu.strona.get_absolute_url}}">{{pod_menu.nazwa}}</a></li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+		</li>
+    {% endfor %}
+	</div>
+{% endblock %}
