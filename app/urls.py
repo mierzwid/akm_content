@@ -3,7 +3,7 @@ admin.autodiscover()
 
 # import has to come after autodiscover, because we can't 
 # unregister FlatPage until it's already been registered.
-import app.admin
+#import app.admin
 
 # This also imports the include function
 from django.conf.urls.defaults import *
